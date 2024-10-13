@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Avistamiento de Especies en Peligro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Reporte de Avistamiento de Especies en Peligro</h1>
+        <img src="https://cdn-icons-png.freepik.com/512/3438/3438479.png" alt="Logo de conservación" class="logo">
+    </header>
+
+    <section>
+        <h2>Formulario de Reporte</h2>
+        <form id="reporte-form">
+            <h3>Datos de la Especie</h3>
+            <label for="especie">Especie:</label>
+            <select id="especie" name="especie" required>
+                <option value="" disabled selected>Selecciona una especie</option>
+                <option value="1">Tortuga Carey</option>
+                <option value="2">Rinoceronte de Java</option>
+                <option value="3">Vaquita Marina</option>
+                <option value="4">Tigre de Sumatra</option>
+                <option value="5">Lince Ibérico</option>
+            </select>
+
+            <div id="especie-info" class="info-especie">
+                <img id="especie-imagen" src="" alt="Imagen de la especie" style="display: none;">
+                <p id="especie-descripcion"></p>
+            </div>
+
+            <h3>Datos del Avistamiento</h3>
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" id="ubicacion" name="ubicacion" required>
+
+            <label for="fecha">Fecha del Avistamiento:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <h3>Datos del Usuario</h3>
+            <label for="cedula">Cédula:</label>
+            <input type="number" id="cedula" name="cedula" required>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Enviar Reporte</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Avistamientos Registrados</h2>
+        <table id="avistamientos">
+            <thead>
+                <tr>
+                    <th>Nombre Común</th>
+                    <th>Ubicación</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Avistamientos se agregarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
